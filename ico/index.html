@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UF ICO 2026 - Recaudación de Fondos</title>
+    <meta name="description"
+        content="ICO 2026 para UF Token - Recaudar fondos para desplegar el proyecto definitivo (UF Token)">
+    <meta name="keywords" content="UF Token, ICO, Initial Coin Offering, blockchain, BSC, criptomoneda">
+    <meta name="author" content="Prosus Corp">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="assets/logo.png" alt="UF Logo" class="logo-img animate-pulse-glow"
+                    onerror="this.style.display='none'">
+                <span class="brand-text text-gradient-gold">UF ICO 2026</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="#objetivo" class="nav-link">Objetivo</a>
+                <a href="#comprar" class="nav-link">Comprar</a>
+                <a href="#estadisticas" class="nav-link">Estadísticas</a>
+                <a href="../" class="btn btn-outline">Website Principal</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <canvas id="particles-canvas" class="particles-canvas"></canvas>
+        <div class="hero-gradient"></div>
+
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="section-title fade-in-up" style="font-size: 3.5rem; margin-bottom: 1.5rem;">
+                    <span class="text-gradient-gold">UF ICO 2026</span>
+                </h1>
+                <p class="hero-description fade-in-up">
+                    Recaudación de fondos para desplegar el proyecto definitivo <strong>UF Token</strong>.
+                    Participa en la primera fase de este proyecto revolucionario que facilitará el acceso a la inversión
+                    inmobiliaria.
+                </p>
+                <div class="hero-cta fade-in-up delay-1">
+                    <a href="#comprar" class="btn btn-primary btn-lg glow-gold">Comprar Tokens</a>
+                    <a href="#objetivo" class="btn btn-outline btn-lg">Conocer Más</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objetivo Section -->
+    <section id="objetivo" class="section section-card">
+        <div class="container">
+            <div class="golden-frame">
+                <h2 class="section-title fade-in-up">
+                    Objetivo de la <span class="text-gradient-gold">ICO 2026</span>
+                </h2>
+                <p class="section-intro fade-in-up">
+                    Esta ICO tiene como objetivo recaudar fondos necesarios para desarrollar y desplegar el proyecto
+                    definitivo <strong>UF Token</strong>,
+                    una stablecoin descentralizada anclada a la Unidad de Fomento (UF) chilena.
+                </p>
+
+                <div class="grid grid-3">
+                    <div class="card fade-in-up" data-delay="0">
+                        <div class="card-icon">🎯</div>
+                        <h3 class="card-title">Financiamiento del Proyecto</h3>
+                        <p class="card-text">Los fondos recaudados se utilizarán para desarrollar la infraestructura
+                            completa del token definitivo, incluyendo smart contracts, oráculo descentralizado, AMM y
+                            sistema de colateral.</p>
+                    </div>
+                    <div class="card fade-in-up" data-delay="100">
+                        <div class="card-icon">🔄</div>
+                        <h3 class="card-title">Intercambio Garantizado</h3>
+                        <p class="card-text">Los tokens UF adquiridos en esta ICO serán intercambiables 1:1 con el token
+                            definitivo cuando esté listo, mediante un smart contract seguro y transparente.</p>
+                    </div>
+                    <div class="card fade-in-up" data-delay="200">
+                        <div class="card-icon">🚀</div>
+                        <h3 class="card-title">Acceso Prioritario</h3>
+                        <p class="card-text">Los participantes de esta ICO tendrán acceso prioritario al token
+                            definitivo y a las funcionalidades avanzadas del ecosistema UF Token.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprar Section -->
+    <section id="comprar" class="section">
+        <div class="container">
+            <div class="golden-frame">
+                <h2 class="section-title fade-in-up">
+                    Compra <span class="text-gradient-gold">UF Tokens</span>
+                </h2>
+                <p class="section-intro fade-in-up">
+                    Participa en la ICO 2026. Puedes comprar tokens con criptomonedas (BNB/USDT).
+                </p>
+
+                <!-- Wallet Connection -->
+                <div id="wallet-section" class="ico-card fade-in-up">
+                    <h3 class="card-title text-primary">Conectar Wallet</h3>
+                    <p class="card-text" style="margin-bottom: 1.5rem;">
+                        Para comprar con criptomonedas, conecta tu wallet (MetaMask, Trust Wallet, etc.)
+                    </p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <button id="connect-wallet-btn" class="btn btn-primary">
+                            Conectar Wallet
+                        </button>
+                        <button id="add-token-btn" class="btn btn-outline" style="display: none;">
+                            Listar UF Token
+                        </button>
+                    </div>
+                    <div id="wallet-info"
+                        style="display: none; margin-top: 1rem; padding: 1rem; background: hsl(var(--card)); border-radius: var(--radius);">
+                        <p><strong>Wallet conectada:</strong> <span id="wallet-address"></span></p>
+                        <p><strong>Red:</strong> <span id="wallet-network"></span></p>
+                        <div id="contract-status"
+                            style="margin-top: 0.5rem; padding: 0.5rem; background: hsl(var(--muted)); border-radius: calc(var(--radius) / 2); font-size: 0.875rem;">
+                            <span id="contract-status-text">Verificando contratos...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buy with Crypto -->
+                <div id="crypto-buy-section" class="ico-card fade-in-up delay-1" style="display: none;">
+                    <h3 class="card-title text-primary">Comprar con Criptomonedas</h3>
+
+                    <!-- Display del precio actual de la UF -->
+                    <div
+                        style="background: hsl(var(--card)); padding: 1rem; border-radius: var(--radius); margin-bottom: 1.5rem; text-align: center;">
+                        <p style="margin: 0; color: hsl(var(--muted-foreground)); font-size: 0.875rem;">Precio actual de
+                            la UF:</p>
+                        <p id="uf-price-display"
+                            style="margin: 0.5rem 0 0 0; font-size: 1.25rem; font-weight: 700; color: hsl(var(--primary));">
+                            Cargando...
+                        </p>
+                    </div>
+
+                    <div class="buy-options">
+                        <div class="buy-option">
+                            <h4>Comprar con BNB</h4>
+                            <div class="input-group">
+                                <label>Cantidad de UF a comprar:</label>
+                                <input type="number" id="bnb-uf-amount" step="0.0001" min="0.0001" placeholder="1.0">
+                            </div>
+                            <div class="input-group">
+                                <label>Precio en BNB:</label>
+                                <input type="text" id="bnb-price" readonly placeholder="Se calculará automáticamente">
+                            </div>
+                            <button id="buy-bnb-btn" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                                Comprar con BNB
+                            </button>
+                        </div>
+
+                        <div class="buy-option">
+                            <h4>Comprar con USDT</h4>
+                            <div class="input-group">
+                                <label>Primero aprueba USDT:</label>
+                                <button id="approve-usdt-btn" class="btn btn-outline"
+                                    style="width: 100%; margin-bottom: 1rem;">
+                                    Aprobar USDT
+                                </button>
+                            </div>
+                            <div class="input-group">
+                                <label>Cantidad de UF a comprar:</label>
+                                <input type="number" id="usdt-uf-amount" step="0.0001" min="0.0001" placeholder="1.0">
+                            </div>
+                            <div class="input-group">
+                                <label>Precio en USDT:</label>
+                                <input type="text" id="usdt-price" readonly placeholder="Se calculará automáticamente">
+                            </div>
+                            <button id="buy-usdt-btn" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                                Comprar con USDT
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buy with Fiat -->
+                <!-- Módulo oculto temporalmente hasta que se solucione el tema de la API de la pasarela de pago -->
+                <div class="ico-card fade-in-up delay-2" style="display: none;">
+                    <h3 class="card-title text-primary">Comprar con Tarjeta Bancaria</h3>
+                    <p class="card-text" style="margin-bottom: 1.5rem;">
+                        Paga de forma segura con tu tarjeta de crédito o débito. Aceptamos todas las tarjetas bancarias
+                        de Chile.
+                        <br><strong>Precio: 1 UF Token = 1 UF (Unidad de Fomento chilena)</strong>
+                    </p>
+
+                    <!-- Formulario oculto hasta que PayPal esté disponible -->
+                    <div class="fiat-purchase-form" style="display: none;">
+                        <div class="input-group">
+                            <label>Email:</label>
+                            <input type="email" id="fiat-email" placeholder="tu@email.com" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Cantidad de UF a comprar:</label>
+                            <input type="number" id="fiat-amount" step="1" min="1" placeholder="1" required>
+                            <small style="color: hsl(var(--muted-foreground)); display: block; margin-top: 0.5rem;">
+                                1 UF Token = 1 UF (precio actualizado en tiempo real)
+                            </small>
+                        </div>
+                        <div class="input-group">
+                            <label>Monto en CLP (pesos chilenos):</label>
+                            <input type="text" id="fiat-total" readonly
+                                placeholder="Se calculará automáticamente según precio UF">
+                        </div>
+                        <div class="input-group">
+                            <label>Dirección de wallet (opcional, para recibir tokens):</label>
+                            <input type="text" id="fiat-wallet" placeholder="0x..." pattern="^0x[a-fA-F0-9]{40}$">
+                            <small style="color: hsl(var(--muted-foreground)); display: block; margin-top: 0.5rem;">
+                                Si no proporcionas una dirección, te contactaremos para enviarte los tokens.
+                            </small>
+                        </div>
+                    </div>
+
+                    <!-- Mensaje de pago fiat (próximamente) -->
+                    <div id="paypal-payment-section"
+                        style="margin-top: 1.5rem; text-align: center; padding: 2rem; background: hsl(var(--muted) / 0.3); border-radius: 0.5rem; border: 2px dashed hsl(var(--muted-foreground) / 0.3);">
+                        <h3 style="color: hsl(var(--primary)); margin-bottom: 0.5rem;">💳 Pago con Tarjeta</h3>
+                        <p style="color: hsl(var(--muted-foreground)); font-size: 1rem; margin-bottom: 0.5rem;">
+                            <strong>Próximamente</strong>
+                        </p>
+                        <p style="color: hsl(var(--muted-foreground)); font-size: 0.875rem;">
+                            Estamos trabajando en la integración de pagos con tarjeta de crédito/débito.<br>
+                            Por ahora, puedes comprar con BNB o USDT usando tu wallet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Estadísticas Section -->
+    <section id="estadisticas" class="section section-card">
+        <div class="container">
+            <div class="golden-frame">
+                <h2 class="section-title fade-in-up">
+                    Estadísticas de la <span class="text-gradient-gold">ICO</span>
+                </h2>
+
+                <div class="grid grid-4" id="ico-stats">
+                    <div class="card fade-in-up" data-delay="0">
+                        <h3 class="card-title text-primary">Tokens Vendidos</h3>
+                        <p class="stat-value" id="tokens-sold">Cargando...</p>
+                        <p class="card-text">de <span id="hard-cap">1000 UF</span> disponibles</p>
+                    </div>
+                    <div class="card fade-in-up" data-delay="100">
+                        <h3 class="card-title text-primary">BNB Recaudado</h3>
+                        <p class="stat-value" id="bnb-raised">Cargando...</p>
+                    </div>
+                    <div class="card fade-in-up" data-delay="200">
+                        <h3 class="card-title text-primary">USDT Recaudado</h3>
+                        <p class="stat-value" id="usdt-raised">Cargando...</p>
+                    </div>
+                    <div class="card fade-in-up" data-delay="300">
+                        <h3 class="card-title text-primary">Estado</h3>
+                        <p class="stat-value" id="ico-status">Cargando...</p>
+                    </div>
+                </div>
+
+                <div class="progress-bar-container fade-in-up delay-1" style="margin-top: 2rem;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill" style="width: 0%;"></div>
+                    </div>
+                    <p class="progress-text" style="text-align: center; margin-top: 1rem;">
+                        <span id="progress-percentage">0%</span> del objetivo alcanzado
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <img src="assets/logo.png" alt="UF Token Logo" class="footer-logo"
+                            onerror="this.style.display='none'">
+                        <span class="brand-text text-gradient-gold">UF ICO 2026</span>
+                    </div>
+                    <p class="footer-text">
+                        ICO para recaudar fondos y desplegar el proyecto definitivo UF Token.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Enlaces</h4>
+                    <ul class="footer-links">
+                        <li><a href="../">Website Principal</a></li>
+                        <li><a href="#objetivo">Objetivo</a></li>
+                        <li><a href="#comprar">Comprar Tokens</a></li>
+                        <li><a href="#estadisticas">Estadísticas</a></li>
+                        <li><a href="#" id="audit-contract-link" target="_blank" rel="noopener noreferrer">Auditar
+                                Contrato</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 UF Token. Desarrollado por <strong class="text-primary"><a href="https://prosuscorp.com"
+                            target="_blank" rel="noopener noreferrer" class="text-primary"
+                            style="text-decoration: none;">Prosus Corp</a></strong></p>
+                <p class="disclaimer">
+                    Descargo de Responsabilidad: Esta ICO tiene fines de recaudación de fondos. La inversión en
+                    criptoactivos conlleva un alto nivel de riesgo.
+                    Consulte con un asesor financiero profesional antes de invertir.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- ethers.js - usando CDN alternativo -->
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <!-- Configuración del Backend - EDITAR ESTE ARCHIVO ANTES DE SUBIR AL HOSTING -->
+    <script src="js/config.js"></script>
+    <!-- PayPal SDK -->
+    <!-- NOTA: PayPal está en desarrollo - no se carga por ahora -->
+    <!-- Cuando esté listo, descomentar y configurar Client ID -->
+    <!--
+    <script>
+        const paypalClientId = 'YOUR_CLIENT_ID';
+        if (paypalClientId && paypalClientId !== 'YOUR_CLIENT_ID') {
+            const script = document.createElement('script');
+            script.src = `https://www.paypal.com/sdk/js?client-id=${paypalClientId}&currency=CLP&locale=es_CL`;
+            script.async = true;
+            document.head.appendChild(script);
+        }
+    </script>
+    -->
+    <script src="js/particles.js"></script>
+    <script src="js/ico.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

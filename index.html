@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UF Token - Facilitando el Acceso a la Inversión Inmobiliaria</title>
+    <meta name="description"
+        content="UF Token - Stablecoin que refleja el precio de La Unidad de Fomento (UF): una unidad de cuenta usada en Chile, reajustable de acuerdo con la inflación.">
+    <meta name="keywords" content="UF Token, stablecoin, UF, Unidad de Fomento, Chile, blockchain, criptomoneda">
+    <meta name="author" content="Prosus Corp">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="UF Token - Facilitando el Acceso a la Inversión Inmobiliaria">
+    <meta property="og:description"
+        content="Una stablecoin descentralizada anclada a la UF chilena, diseñada para ofrecer ahorro estable, inversión inmobiliaria fraccionada y financiamiento descentralizado a nivel global.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://uftoken.cl">
+    <meta property="og:image" content="https://uftoken.cl/assets/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="UF Token - Facilitando el Acceso a la Inversión Inmobiliaria">
+    <meta name="twitter:description"
+        content="Una stablecoin descentralizada anclada a la UF chilena, diseñada para ofrecer ahorro estable, inversión inmobiliaria fraccionada y financiamiento descentralizado a nivel global.">
+    <meta name="twitter:image" content="https://uftoken.cl/assets/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- ICO Invitation Modal -->
+    <div id="ico-modal" class="ico-modal">
+        <div class="ico-modal-overlay"></div>
+        <div class="ico-modal-content">
+            <button class="ico-modal-close" id="ico-modal-close" aria-label="Cerrar modal">
+                <span>&times;</span>
+            </button>
+            <div class="ico-modal-body">
+                <div class="ico-modal-image">
+                    <img src="assets/logo.png" alt="UF Token ICO" class="ico-logo">
+                    <div class="ico-badge">🚀 ICO 2026</div>
+                </div>
+                <div class="ico-modal-text">
+                    <h2 class="text-gradient-gold">¡Invierte en UF Token!</h2>
+                    <p>Participa en nuestra ICO 2026 y sé parte de la revolución inmobiliaria descentralizada.</p>
+                    <p><strong>Oportunidad única</strong> de adquirir tokens UF antes del lanzamiento oficial.</p>
+                    <div class="ico-modal-features">
+                        <div class="ico-feature">✓ Intercambio garantizado 1:1 con el token definitivo</div>
+                        <div class="ico-feature">✓ Acceso prioritario al ecosistema</div>
+                        <div class="ico-feature">✓ Precio especial de lanzamiento</div>
+                    </div>
+                    <div class="ico-modal-actions">
+                        <a href="ico/" class="btn btn-primary btn-lg glow-gold">Participar Ahora</a>
+                        <button class="btn btn-outline" id="ico-modal-later">Más Tarde</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="assets/logo.png" alt="UF Logo" class="logo-img animate-pulse-glow">
+                <span class="brand-text text-gradient-gold">UF Token</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#inicio" class="nav-link">Inicio</a>
+                <a href="#problema" class="nav-link">Problema</a>
+                <a href="#solucion" class="nav-link">Solución</a>
+                <a href="#caracteristicas" class="nav-link">Características</a>
+                <a href="#oraculo" class="nav-link">Oráculo</a>
+                <a href="#colateral" class="nav-link">Colateral</a>
+                <a href="#tokenomics" class="nav-link">Tokenomics</a>
+                <a href="ico/" class="btn btn-primary glow-gold">Participar en ICO</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <canvas id="particles-canvas" class="particles-canvas"></canvas>
+        <div class="hero-gradient"></div>
+
+        <div class="hero-content">
+            <div class="container">
+                <p class="hero-description fade-in-up">
+                    Una stablecoin descentralizada anclada a la UF chilena, diseñada para ofrecer ahorro estable,
+                    inversión inmobiliaria fraccionada y financiamiento descentralizado a nivel global.
+                </p>
+                <div class="hero-cta fade-in-up delay-1">
+                    <a href="#solucion" class="btn btn-primary btn-lg glow-gold" id="participar-btn">Participar</a>
+                    <a href="#problema" class="btn btn-outline btn-lg">Leer Whitepaper</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- El Problema Section -->
+    <section id="problema" class="section section-card">
+        <div class="container">
+            <div class="golden-frame">
+                <h2 class="section-title fade-in-up">
+                    El Problema: <span class="text-gradient-gold">La Barrera de Acceso a la Vivienda</span>
+                </h2>
+
+                <div class="grid grid-3">
+                    <div class="card fade-in-up" data-delay="0">
+                        <div class="card-icon">📉</div>
+                        <h3 class="card-title">Inflación Galopante</h3>
+                        <p class="card-text">La inflación devalúa constantemente el poder adquisitivo, haciendo
+                            imposible ahorrar en monedas locales inestables.</p>
+                    </div>
+                    <div class="card fade-in-up" data-delay="100">
+                        <div class="card-icon">🏦</div>
+                        <h3 class="card-title">Requisitos Bancarios Estrictos</h3>
+                        <p class="card-text">Los bancos tradicionales imponen requisitos imposibles de cumplir para
+                            millones de personas en el mundo.</p>
+                    </div>
+                    <div class="card fade-in-up" data-delay="200">
+                        <div class="card-icon">💰</div>
+                        <h3 class="card-title">Alto Costo de Entrada</h3>
+                        <p class="card-text">Las propiedades inmobiliarias requieren capitales enormes, excluyendo a la
+                            mayoría de la población.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- La Solución Section -->
+    <section id="solucion" class="section">
+        <div class="container">
+            <div class="golden-frame">
+                <h2 class="section-title fade-in-up">
+                    La Solución: <span class="text-gradient-gold">UF Token</span>
+                </h2>
+
+                <div class="solution-grid">
+                    <div class="solution-text fade-in-up">
+                        <h3>Una Stablecoin Descentralizada</h3>
+                        <p>UF Token replica el valor exacto de la Unidad de Fomento (UF) de Chile, una unidad financiera
+                            que ha preservado el poder adquisitivo en el sector inmobiliario desde 1967.</p>
+                        <p>Construida sobre BNB Chain con un oráculo descentralizado y un sistema de colateral de tres
+                            capas, garantizando estabilidad y seguridad sin intermediarios.</p>
+                        <a href="#oraculo" class="btn btn-primary glow-gold">Conocer Más</a>
+                    </div>
+                    <div class="solution-image fade-in-up delay-1">
+                        <div class="image-wrapper">
+                            <img src="assets/hero-bg.jpg" alt="Tokenización de Activos del Mundo Real"
+                                class="solution-img">
+                            <div class="image-overlay">
+                                <p class="text-gradient-gold">Tokenización de Activos del Mundo Real</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card fade-in-up" data-delay="0">
+                    <h4 class="card-title text-primary">Ahorro Estable y Sin Fronteras</h4>
+                    <p class="card-text">Protege tu capital de la devaluación y acumula patrimonio en una unidad de
+                        cuenta estable.</p>
+                </div>
+                <div class="card fade-in-up" data-delay="100">
+                    <h4 class="card-title text-primary">Inversión Inmobiliaria Fraccionada</h4>
+                    <p class="card-text">Accede a bienes raíces tokenizados (RWA) con fracciones asequibles para todos.
+                    </p>
+                </div>
+                <div class="card fade-in-up" data-delay="200">
+                    <h4 class="card-title text-primary">Financiamiento Descentralizado</h4>
+                    <p class="card-text">Usa tu historial de ahorro como colateral para acceder a financiamiento sin
+                        bancos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Características Section -->
+    <section id="caracteristicas" class="section section-card">
+        <!-- Canvas de cadenas doradas - temporalmente oculto para desarrollo futuro -->
+        <!-- <canvas id="chains-canvas" class="chains-canvas"></canvas> -->
+        <div class="container">
+            <div class="golden-frame">
+                <h2 class="section-title fade-in-up">Características Principales</h2>
+
+                <div class="grid grid-4">
+                    <div class="card fade-in-up" data-delay="0">
+                        <div class="card-icon">🔒</div>
+                        <h3 class="card-title">Seguridad Blockchain</h3>
+                        <p class="card-text">Infraestructura descentralizada con smart contracts auditados y protocolos
+                            de seguridad de nivel institucional.</p>
+                    </div>
+                    <div class="card fade-in-up" data-delay="100">
+                        <div class="card-icon">📈</div>
+                        <h3 class="card-title">Estabilidad Garantizada</h3>
+                        <p class="card-text">Indexación directa a la UF mediante oráculo confiable, manteniendo la
+                            paridad del precio en tiempo real.</p>
+                    </div>
+                    <div class="card fade-in-up" data-delay="200">
+                        <div class="card-icon">🌐</div>
+                        <h3 class="card-title">Acceso Global</h3>
+                        <p class="card-text">Disponible 24/7 en cualquier parte del mundo, sin barreras geográficas ni
+                            restricciones bancarias tradicionales.</p>
+                    </div>
+                    <div class="card fade-in-up" data-delay="300">
+                        <div class="card-icon">💎</div>
+                        <h3 class="card-title">Transparencia Total</h3>
+                        <p class="card-text">Todas las transacciones y reservas son verificables públicamente en la
+                            blockchain, garantizando confianza.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- El Oráculo Section -->
+    <section id="oraculo" class="section">
+        <div class="container">
+            <div class="golden-frame">
+                <h2 class="section-title fade-in-up">
+                    El Oráculo UF: <span class="text-gradient-gold">La Fábrica</span>
+                </h2>
+                <p class="section-intro fade-in-up">
+                    La integridad de UF Token reside en su capacidad para mantener una paridad 1:1 con el valor oficial
+                    de la UF. Esto se logra a través de un sistema de oráculo descentralizado que opera dentro de un
+                    mercado regulador interno llamado "La Fábrica".
+                </p>
+
+                <div class="grid grid-2">
+                    <div class="card fade-in-up" data-delay="0">
+                        <h4 class="card-title text-primary">Nodos Descentralizados</h4>
+                        <p class="card-text">Una red de servidores independientes obtiene el valor oficial de la UF
+                            directamente de fuentes legales mediante APIs, garantizando precisión y descentralización.
+                        </p>
+                    </div>
+                    <div class="card fade-in-up" data-delay="100">
+                        <h4 class="card-title text-primary">Contrato Ponderador</h4>
+                        <p class="card-text">Recolecta valores de todos los nodos y calcula un precio final ponderado
+                            basado en la reputación de cada participante.</p>
+                    </div>
+                </div>
+
+                <div class="card card-highlight fade-in-up" data-delay="200">
+                    <h4 class="card-title text-primary">Sistema de Reputación Dinámica</h4>
+                    <ul class="reputation-list">
+                        <li>
+                            <span class="check">✓</span>
+                            <span>La reputación aumenta cuando un nodo reporta el valor correcto</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span>Se penaliza proporcionalmente por desviaciones del valor</span>
+                        </li>
+                        <li>
+                            <span class="check">✓</span>
+                            <span>Con el tiempo, disminuye completamente la influencia del equipo fundador</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colateral de Tres Capas Section -->
+    <section id="colateral" class="section section-card">
+        <div class="container">
+            <div class="golden-frame">
+                <h2 class="section-title fade-in-up">Colateral de Tres Capas</h2>
+
+                <div class="layers-list">
+                    <div class="layer-card fade-in-up" data-delay="0">
+                        <div class="layer-number">1</div>
+                        <div class="layer-content">
+                            <h3 class="card-title text-primary">Capa 1: Colateral Cripto-Nativo</h3>
+                            <p class="card-text">Un porcentaje de las reservas se mantiene en pools de liquidez de
+                                Creadores de Mercado Automatizados (AMM), garantizando liquidez y arbitraje eficiente
+                                para el trading diario.</p>
+                        </div>
+                    </div>
+                    <div class="layer-card fade-in-up" data-delay="100">
+                        <div class="layer-number">2</div>
+                        <div class="layer-content">
+                            <h3 class="card-title text-primary">Capa 2: Activos del Mundo Real (RWA)</h3>
+                            <p class="card-text">El núcleo del colateral. Propiedades inmobiliarias son auditadas legal
+                                y técnicamente para ser tokenizadas, otorgando al UF Token un valor intrínseco y
+                                tangible.</p>
+                        </div>
+                    </div>
+                    <div class="layer-card fade-in-up" data-delay="200">
+                        <div class="layer-number">3</div>
+                        <div class="layer-content">
+                            <h3 class="card-title text-primary">Capa 3: Colateral Financiero Tradicional</h3>
+                            <p class="card-text">Depósitos a plazo denominados en UF en instituciones bancarias chilenas
+                                reguladas, ofreciendo una base de estabilidad y confianza adicional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tokenomics Section -->
+    <section id="tokenomics" class="section">
+        <div class="container">
+            <div class="golden-frame">
+                <h2 class="section-title fade-in-up">
+                    Tokenomics: <span class="text-gradient-gold">Justo y Transparente</span>
+                </h2>
+
+                <div class="grid grid-3">
+                    <div class="card fade-in-up" data-delay="0">
+                        <h3 class="card-title text-primary">Suministro Elástico</h3>
+                        <p class="card-text">Los tokens se crean al depositar colateral y se queman al redimirlo. Cada
+                            token en circulación está siempre respaldado.</p>
+                    </div>
+                    <div class="card fade-in-up" data-delay="100">
+                        <h3 class="card-title text-primary">Sin Preminado</h3>
+                        <p class="card-text">No existe asignación previa de tokens. El proyecto se lanza de forma justa
+                            donde la comunidad y el protocolo son los únicos actores.</p>
+                    </div>
+                    <div class="card fade-in-up" data-delay="200">
+                        <h3 class="card-title text-primary">Gobernanza Comunitaria</h3>
+                        <p class="card-text">La gobernanza se transfiere progresivamente a los tenedores del token,
+                            quienes votan sobre nuevos colaterales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comunidad Section -->
+    <section id="comunidad" class="section section-card">
+        <div class="container">
+            <div class="golden-frame">
+                <h2 class="section-title fade-in-up">Comunidad y Visión a Futuro</h2>
+
+                <div class="community-content fade-in-up">
+                    <p>UF Token nace con el respaldo de comunidades consolidadas y activas de proyectos predecesores
+                        como ProsusToken y KleeToken, incluyendo a Web3 Chile (ChileDAO), Criptomonedas Chile y Prosus
+                        Money.</p>
+                    <p>Esta base sólida de usuarios y colaboradores garantiza un ecosistema vibrante desde el primer
+                        día, con una visión clara de evolucionar hacia una cadena propia (L1 o L2) cuando se alcance la
+                        masa crítica.</p>
+                    <div class="card card-highlight">
+                        <h3 class="card-title text-primary">Hoja de Ruta a Largo Plazo</h3>
+                        <p class="card-text">Si el protocolo alcanza una masa crítica de valor bloqueado, ProsusCorp
+                            liderará la migración del ecosistema a una cadena propia. Este paso estratégico optimizará
+                            la eficiencia, reducirá costos de transacción y garantizará la soberanía total del proyecto.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section with 3D Coin -->
+    <section class="section">
+        <div class="container">
+            <div class="golden-frame">
+                <h2 class="section-title fade-in-up">
+                    Únete a la <span class="text-gradient-gold">Revolución Inmobiliaria</span>
+                </h2>
+                <p class="section-intro fade-in-up">
+                    Sé parte de la comunidad que está facilitando el acceso a la inversión inmobiliaria global.
+                </p>
+
+                <div class="coin-container fade-in-up delay-1">
+                    <div id="coin-canvas" class="coin-canvas"></div>
+                </div>
+
+                <div class="cta-buttons fade-in-up delay-2">
+                    <a href="ico/" class="btn btn-primary btn-lg glow-gold">Participar en ICO</a>
+                    <a href="#comunidad" class="btn btn-outline btn-lg">Únete a la Comunidad</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <img src="assets/logo.png" alt="UF Token Logo" class="footer-logo">
+                        <span class="brand-text text-gradient-gold">UF Token</span>
+                    </div>
+                    <p class="footer-text">
+                        Stablecoin que refleja el precio de La Unidad de Fomento (UF): una unidad de cuenta usada en
+                        Chile, reajustable de acuerdo con la inflación.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Enlaces</h4>
+                    <ul class="footer-links">
+                        <li><a href="ico/">Participar en ICO</a></li>
+                        <li><a href="#oraculo">Instrucciones</a></li>
+                        <li><a href="#" id="listar-wallet-link">Listar en wallet</a></li>
+                        <li><a href="#comunidad">Comunidad</a></li>
+                        <li><a href="#" id="audit-contract-link" target="_blank" rel="noopener noreferrer">Auditar Contrato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Redes Sociales</h4>
+                    <div class="social-links">
+                        <a href="#">Telegram</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 UF Token. Desarrollado por <strong class="text-primary"><a href="https://prosuscorp.com"
+                            target="_blank" rel="noopener noreferrer" class="text-primary"
+                            style="text-decoration: none;">Prosus Corp</a></strong></p>
+                <p class="disclaimer">
+                    Descargo de Responsabilidad: Este sitio web tiene fines informativos únicamente. La inversión en
+                    criptoactivos conlleva un alto nivel de riesgo. Consulte con un asesor financiero profesional antes
+                    de invertir.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/coin-3d.js"></script>
+    <!-- Script de cadenas doradas - temporalmente desactivado para desarrollo futuro -->
+    <!-- <script src="js/golden-chains.js"></script> -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

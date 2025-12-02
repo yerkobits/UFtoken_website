@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago Exitoso - UF ICO 2026</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .success-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        .success-card {
+            max-width: 600px;
+            text-align: center;
+            background: hsl(var(--card) / 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid hsl(var(--border));
+            border-radius: var(--radius);
+            padding: 3rem;
+        }
+        .success-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-card">
+            <div class="success-icon">✅</div>
+            <h1 class="text-gradient-gold" style="font-size: 2.5rem; margin-bottom: 1rem;">¡Pago Exitoso!</h1>
+            <p style="font-size: 1.125rem; margin-bottom: 2rem; color: hsl(var(--muted-foreground));">
+                Tu pago ha sido procesado correctamente. Los tokens UF serán enviados a tu wallet en breve.
+            </p>
+            <div style="background: hsl(var(--card)); padding: 1.5rem; border-radius: var(--radius); margin-bottom: 2rem;">
+                <p><strong>ID de Orden:</strong> <span id="order-id">-</span></p>
+                <p><strong>Estado:</strong> <span style="color: hsl(var(--primary));">Completado</span></p>
+            </div>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="index.html" class="btn btn-primary">Volver a ICO</a>
+                <a href="../" class="btn btn-outline">Ir al Website Principal</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Obtener orderId de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const orderId = urlParams.get('orderId');
+        if (orderId) {
+            document.getElementById('order-id').textContent = orderId;
+        }
+    </script>
+</body>
+</html>
+
